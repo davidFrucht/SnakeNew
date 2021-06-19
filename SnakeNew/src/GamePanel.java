@@ -34,7 +34,7 @@ public class GamePanel extends JPanel implements ActionListener {
                 repaint();
 
                 try{
-                    Thread.sleep(Vars.EASY_LEVEL_INTERVAL);
+                    Thread.sleep(Vars.interval);
                 }catch (Exception e){
                     System.out.println("unable to make the thread to sleep");
                 }
@@ -56,10 +56,10 @@ public class GamePanel extends JPanel implements ActionListener {
     }
 
     public void DrawScore (Graphics g){
-        Font f = new Font("Arial", Font.BOLD , 22 );
+        Font f = new Font("Arial", Font.BOLD , Vars.FONT_SIZE );
         g.setColor(Color.BLUE);
         g.setFont(f);
-        g.drawString("SCORE: "+ snake.GetScoreCounter() , 10 ,Vars.WINDOW_WIDTH/2+250);
+        g.drawString("SCORE: " + snake.GetScoreCounter() , Vars.DRAW_SCORE_X ,Vars.DRAW_SCORE_Y);
     }
 
 

@@ -1,6 +1,8 @@
 /* David Frucht 19/06/2021 */
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class SnakeFrame extends JFrame {
 
@@ -10,7 +12,7 @@ public class SnakeFrame extends JFrame {
 
     public static void main(String[] args) {
 
-        new SnakeFrame();
+        new MainMenu();
     }
 
     public SnakeFrame(){
@@ -26,7 +28,7 @@ public class SnakeFrame extends JFrame {
         KeybordActions keybordActions = new KeybordActions(this);
 
         gameScene = new GamePanel();
-        gameScene.setBounds(0,0,vars.WINDOW_WIDTH,vars.WINDOW_HEIGHT);
+        gameScene.setBounds(Vars.WINDOW_X,Vars.WINDOW_Y,vars.WINDOW_WIDTH,vars.WINDOW_HEIGHT);
 
         this.add(gameScene);
         this.addKeyListener(keybordActions);
