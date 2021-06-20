@@ -20,8 +20,8 @@ public class Vars {
 
     /* Main Menu components bounds */
 
-    static final int INSTRUCTION_TEXT_X = 50;
-    static final int INSTRUCTION_TEXT_Y = 50;
+    static final int INSTRUCTION_TEXT_X = 400;
+    static final int INSTRUCTION_TEXT_Y = 400;
     static final int INSTRUCTION_TEXT_WIDTH = 400;
     static final int INSTRUCTION_TEXT_HEIGHT = 200;
 

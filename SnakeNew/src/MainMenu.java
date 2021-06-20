@@ -6,7 +6,6 @@ import java.awt.event.ActionListener;
 public class MainMenu extends JFrame {
 
     public MainMenu(){
-        this.setVisible(true);
         this.setSize(Vars.WINDOW_WIDTH, Vars.WINDOW_HEIGHT);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLayout(null);
@@ -21,7 +20,6 @@ public class MainMenu extends JFrame {
         instructionText.setOpaque(false);
         instructionText.setBorder(BorderFactory.createEmptyBorder());
         instructionText.setText("Welcome to Jenny and David Snake Game!!\n\nGame Instructions:\nUp Arrow - Move Snake Up\nDown Arrow - Move Snake Down\nLeft Arrow - Move Snake Left\nRight Arrow - Move Snake Right");
-        instructionText.setVisible(true);
 
         JLabel chooseLevel = new JLabel("Select Level:");
         chooseLevel.setBounds(Vars.CHOOSE_LEVEL_LABEL_X,Vars.CHOOSE_LEVEL_LABEL_Y,Vars.CHOOSE_LEVEL_LABEL_WIDTH,Vars.CHOOSE_LEVEL_LABEL_HEIGHT);
@@ -55,8 +53,9 @@ public class MainMenu extends JFrame {
         startGameButton.setBounds(Vars.START_GAME_BUTTON_X,Vars.START_GAME_BUTTON_Y,Vars.START_GAME_BUTTON_WIDTH,Vars.START_GAME_BUTTON_HEIGHT);
         startGameButton.setText("Start");
 
-        this.add(instructionText, BorderLayout.CENTER);
+        this.add(instructionText);
         this.add(startGameButton);
+        this.setVisible(true);
 
     }
 }

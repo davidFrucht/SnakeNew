@@ -16,7 +16,6 @@ public class SnakeFrame extends JFrame {
     }
 
     public SnakeFrame(){
-        this.setVisible(true);
         this.setSize(vars.WINDOW_WIDTH, vars.WINDOW_HEIGHT);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLayout(null);
@@ -32,6 +31,8 @@ public class SnakeFrame extends JFrame {
 
         this.add(gameScene);
         this.addKeyListener(keybordActions);
+        this.setVisible(true);
+
 
     }
 
